@@ -87,7 +87,7 @@ const App = () => {
                 <Icon name="map-marker-alt" size={25} color="#212121" />
               </View>
               <View style={{justifyContent: 'center', marginLeft: 10, flex: 1}}>
-                <Text style={{fontWeight: 'bold'}}>Sukohaarjo, Jawa Tengah</Text>
+                <Text style={{fontWeight: 'bold'}}>Sukoharjo, Jawa Tengah</Text>
               </View>
             </View>
             <View
