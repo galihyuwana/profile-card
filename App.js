@@ -8,135 +8,227 @@ import {
   ImageBackground,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-import DefaultImage from './image/profile.jpeg';
+import DefaultImage from './image/galih.jpg';
 
 const App = () => {
   const DEFAULT_IMAGE = Image.resolveAssetSource(DefaultImage).uri;
   return (
     <View style={{flex: 1}}>
       <StatusBar barStyle={'light-content'} backgroundColor="#212121" />
-      <ImageBackground
-        source={{
-          uri: 'https://images.unsplash.com/photo-1507281736509-c6289f1ea0f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
-        }}
-        style={{flex: 0.5}}
-        resizeMode={'cover'}>
-        <View style={{flex: 0.5}}></View>
-      </ImageBackground>
-      <View style={{flex: 1, backgroundColor: '#FFFFFF'}}>
-        <View style={{justifyContent: 'center', alignItems: 'center'}}>
+      <View
+        style={{
+          backgroundColor: '#c3c9bb',
+          height: 250,
+        }}>
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'row',
+            alignItems: 'center',
+            paddingLeft: 30,
+          }}>
           <Image
-          source={{uri: DEFAULT_IMAGE}}
+            source={{uri: DEFAULT_IMAGE}}
             style={{
-              width: 100,
-              height: 100,
-              borderRadius: 100 / 2,
-              borderWidth: 3,
-              borderColor: '#FFFFFF',
-              position: 'absolute',
-              zIndex: 2,
+              width: 140,
+              height: 140,
+              borderRadius: 200 / 2,
             }}
           />
-        </View>
-        <View style={{marginTop: 60}}>
-          <Text
-            style={{
-              fontWeight: 'bold',
-              fontSize: 18,
-              textAlign: 'center',
-              color: '#212121',
-            }}>Galih Eka Yuwana
-          </Text>
-          <Text style={{textAlign: 'center'}}>
-            XII RPL-A   |   SMKN 2 SURAKARTA
-          </Text>
-          <View style={{marginLeft: 80}}>
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-                marginTop: 20,
-              }}>
-              <View
-                style={{
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  width: 40,
-                  height: 40,
-                }}>
-                <Icon name="phone" size={25} color="#212121" />
-              </View>
-              <View style={{justifyContent: 'center', marginLeft: 10, flex: 1}}>
-                <Text style={{fontWeight: 'bold'}}>081233559837</Text>
-              </View>
-            </View>
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <View
-                style={{
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  width: 40,
-                  height: 40,
-                }}>
-                <Icon name="map-marker-alt" size={25} color="#212121" />
-              </View>
-              <View style={{justifyContent: 'center', marginLeft: 10, flex: 1}}>
-                <Text style={{fontWeight: 'bold'}}>Sukoharjo, Jawa Tengah</Text>
-              </View>
-            </View>
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}>
-              <View
-                style={{
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  width: 40,
-                  height: 40,
-                }}>
-                <Icon name="envelope" size={25} color="#212121" />
-              </View>
-              <View style={{justifyContent: 'center', marginLeft: 10, flex: 1}}>
-                <Text style={{fontWeight: 'bold'}}>
-                  galihyuwana44@gmail.com
-                </Text>
-              </View>
-            </View>
-          </View>
           <View
-            style={{flexDirection: 'row', marginTop: 40, marginHorizontal: 30}}>
-            <TouchableOpacity
-              style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-              <Icon name="facebook" size={25} color="#bdbdbd" />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-              <Icon name="instagram" size={25} color="#bdbdbd" />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-              <Icon name="github" size={25} color="#bdbdbd" />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-              <Icon name="twitter" size={25} color="#bdbdbd" />
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-              <Icon name="linkedin" size={25} color="#bdbdbd" />
-            </TouchableOpacity>
+            style={{
+              marginLeft: 20,
+            }}>
+            <Text
+              style={{
+                fontWeight: '700',
+                fontSize: 25,
+                color: '#5a5c53',
+              }}>
+              Galih Eka Yuwana
+            </Text>
+            <Text
+            style={{
+              fontSize:15,
+              fontWeight:"400"
+            }}
+            >XII RPL-A | SMKN 2 SURAKARTA</Text>
           </View>
         </View>
       </View>
+      {/* nama end */}
+
+      {/* data diri start */}
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: '#FFFFFF',
+          paddingHorizontal: 20,
+          paddingTop: 40,
+        }}>
+        {/* phone start */}
+        <View
+          style={{
+            flexDirection: 'row',
+            backgroundColor: '#c3c9bb',
+            height: 100,
+            paddingLeft: 20,
+            alignItems: 'center',
+            borderRadius: 5,
+            borderBottomWidth: 3,
+            borderBottomColor: '#5a5c53',
+          }}>
+          <Icon
+            style={{
+              paddingTop: 10,
+            }}
+            name="phone-alt"
+            size={30}
+            color="#212121"
+          />
+          <View
+            style={{
+              flex: 1,
+              marginLeft: 25,
+              marginRight: 25,
+              alignItems: 'flex-end',
+            }}>
+            <Text
+              style={{
+                fontWeight: '600',
+                fontSize: 25,
+              }}>
+              No. Hp
+            </Text>
+            <Text
+              style={{
+                fontSize: 22,
+                marginTop: 5,
+                // fontWeight:'500'
+              }}>
+              +62812 3355 9837
+            </Text>
+          </View>
+        </View>
+        {/* phone end */}
+
+        {/* alamat start */}
+        <View
+          style={{
+            flexDirection: 'row',
+            backgroundColor: '#c3c9bb',
+            height: 100,
+            marginTop: 20,
+            paddingLeft: 20,
+            borderRadius: 5,
+            alignItems: 'center',
+            borderBottomWidth: 3,
+            borderBottomColor: '#5a5c53',
+          }}>
+          <Icon
+            style={{
+              paddingTop: 10,
+            }}
+            name="map-marker-alt"
+            size={30}
+            color="#212121"
+          />
+          <View
+            style={{
+              flex: 1,
+              marginLeft: 25,
+              marginRight: 25,
+              alignItems: 'flex-end',
+            }}>
+            <Text
+              style={{
+                fontWeight: '600',
+                fontSize: 25,
+              }}>
+              Alamat
+            </Text>
+            <Text
+              style={{
+                fontSize: 22,
+                marginTop: 5,
+                // fontWeight:'500'
+              }}>
+              Sukoharjo, Jawa Tengah, Indonesia
+            </Text>
+          </View>
+        </View>
+        {/* alamat end */}
+
+        <View
+          style={{
+            flexDirection: 'row',
+            backgroundColor: '#c3c9bb',
+            marginTop: 20,
+            height: 100,
+            paddingLeft: 20,
+            borderRadius: 5,
+            alignItems: 'center',
+            borderBottomWidth: 3,
+            borderBottomColor: '#5a5c53',
+          }}>
+          <Icon
+            style={{
+              paddingTop: 10,
+            }}
+            name="envelope"
+            size={30}
+            color="#212121"
+          />
+          <View
+            style={{
+              flex: 1,
+              marginLeft: 25,
+              marginRight: 25,
+              alignItems: 'flex-end',
+            }}>
+            <Text
+              style={{
+                fontSize: 25,
+                fontWeight: '600',
+              }}>
+              Email
+            </Text>
+            <Text
+              style={{
+                fontSize: 22,
+                marginTop: 5,
+                // fontWeight:'500'
+              }}>
+              galiheka@smkn2-solo.net
+            </Text>
+          </View>
+        </View>
+
+      </View>
+        {/* sosmed */}
+        <View style={{flexDirection: 'row', backgroundColor:'#FFFFFF', paddingBottom: 15, }}>
+          <TouchableOpacity
+            style={{flex: 1, justifyContent: 'center', alignItems: 'center',}}>
+            <Icon name="facebook" size={30} color="#bdbdbd" />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+            <Icon name="instagram" size={30} color="#bdbdbd" />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+            <Icon name="github" size={30} color="#bdbdbd" />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+            <Icon name="twitter" size={30} color="#bdbdbd" />
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+            <Icon name="linkedin" size={30} color="#bdbdbd" />
+          </TouchableOpacity>
+        </View>
+      {/* data diri end */}
     </View>
   );
 };
